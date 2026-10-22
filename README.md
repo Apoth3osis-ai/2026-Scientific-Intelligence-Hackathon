@@ -14,6 +14,8 @@ This repo holds everything the run produced: the workflow itself, every circuit,
 
    > Run the "Replicate and Certify a Quantum Chemistry Result" workflow on recent LiH papers.
 
+   You can also chat with the public **Quantum Circuit Building Agent** on AgentPMT, which already has the workflow, its tools and its context documents attached.
+
    The workflow finds papers, reproduces their chemistry and builds the bond curve. It simulates, exports and certifies the circuits, and saves the report and certificates to your AgentPMT files. The two context documents it relies on are public on AgentPMT (copies are in [`context/`](context/)). Paper searches go through your own Valency connection.
 
 ## Headline results
