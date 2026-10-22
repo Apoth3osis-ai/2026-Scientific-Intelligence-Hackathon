@@ -1,0 +1,2213 @@
+{
+ "action": "certify_circuit",
+ "certificate_file": {
+  "file_id": "d8092f67-5b11-4127-9fc2-0d29378eb819",
+  "filename": "qpcert_a272d51fc2ea1e18.qpcert",
+  "content_type": "application/vnd.heyting.qpcert+json",
+  "size_bytes": 112176,
+  "expiration_date": "2026-10-29T22:17:57.732825",
+  "certificate_id": "qpcert_a272d51fc2ea1e18",
+  "certificate_sha256": "858914ff6b8aae5b2d417ae8684c97bd76c1b07771dfc47fe705cb36f1d408bd",
+  "semantic_profile": "exact_clifford_t_v2",
+  "circuit_subject_sha256": "a272d51fc2ea1e18a4140539fdaa4a08048edf5024afc136b6c62a4b5b3cb030",
+  "requested_claims_sha256": "c9c50753c402cc145f61daf270a8b738dd058d751ade622616a27886aea2206d",
+  "certified_claim_ids": [
+   "hf_a_k2_prep_action",
+   "hf_a_k2_prep_well_formed"
+  ],
+  "artifact_count": 11
+ },
+ "result": {
+  "canonical_request_sha256": "a61b534dcc616c2fa681fe5a23c9cad9d1cc44bc9280c1b09628095c7c9da7c0",
+  "errors": [],
+  "limitations": [
+   "transport completion is not a proof tier; consume the field-level receipts",
+   "bundle construction certifies a supplied circuit and claim ledger; it does not synthesize arbitrary circuits from theorem text",
+   "proof scope is profile-indexed: unsigned/signed symplectic Clifford, exact D[omega] unitary or outcome-instrument semantics, and exact two-power cyclotomic unitary semantics; no profile implies a stronger cross-profile claim",
+   "deferred visualization lenses remain explicit and carry no inferred support",
+   "provider packages are offline source artifacts; no SDK import, authentication, transpilation, provider submission, device execution, or result retrieval occurs",
+   "execution sampling and statistical non-rejection are not a proof tier; pinned local qiskit-aer/stim adapters provide independent differential evidence only when the required isolated Python environment is configured",
+   "external orchestration and AgentPMT integration are outside this standalone project",
+   "the provider-source fence validates bounded parse-only eligibility; fenced_not_parsed is not a circuit, semantic, or proof receipt",
+   "template descriptor expansion alone is not an algorithm-semantic proof; contracted exact-profile GHZ-4, BV-3, Grover-2/Grover-3, and fixed-zero-input pre-correction teleportation expose kernel-eligible independent semantic claims that become proven only through qpcert replay"
+  ],
+  "operation": "bundle_construct",
+  "result": {
+   "certificate_validation": {
+    "certificate_sha256": "858914ff6b8aae5b2d417ae8684c97bd76c1b07771dfc47fe705cb36f1d408bd",
+    "circuit_subject_sha256": "a272d51fc2ea1e18a4140539fdaa4a08048edf5024afc136b6c62a4b5b3cb030",
+    "errors": [],
+    "kernel_supported_claim_ids": [
+     "hf_a_k2_prep_action",
+     "hf_a_k2_prep_well_formed"
+    ],
+    "limitations": [
+     "kernel support is scoped to the certificate semantic profile, claim IDs, and theorem rows named here; it does not transfer to a different carrier",
+     "the Rust qpcert eliminator is in the trusted orchestration base; Phase 8 hardens reproducible builds and deployment custody",
+     "valid means canonical custody, deterministic reconstruction, exact dependency match, kernel replay, and claim-indexed evidence coherence; it is not a global quantum-circuit truth bit"
+    ],
+    "replayed_theorems": [
+     {
+      "axioms": [],
+      "theorem": "Generated.ProofCarryingQuantum.CertCa272d51fc2ea1e18.claim_hf_a_k2_prep_well_formed"
+     },
+     {
+      "axioms": [],
+      "theorem": "Generated.ProofCarryingQuantum.CertCa272d51fc2ea1e18.claim_hf_a_k2_prep_action"
+     },
+     {
+      "axioms": [],
+      "theorem": "Generated.ProofCarryingQuantum.CertCa272d51fc2ea1e18.anti_vacuity_t_ne_tdg"
+     },
+     {
+      "axioms": [],
+      "theorem": "Generated.ProofCarryingQuantum.CertCa272d51fc2ea1e18.anti_vacuity_measurement_changes_instrument"
+     }
+    ],
+    "schema": "heyting.quantum_proof_certificate_validation_receipt.v1",
+    "valid": true
+   },
+   "circuit_subject_sha256": "a272d51fc2ea1e18a4140539fdaa4a08048edf5024afc136b6c62a4b5b3cb030",
+   "circuit_validation": {
+    "canonicalization": "RFC8785-JCS-with-integer-only-JSON-numbers",
+    "circuit_subject_sha256": "a272d51fc2ea1e18a4140539fdaa4a08048edf5024afc136b6c62a4b5b3cb030",
+    "claim_boundary": [
+     "measurement semantics, which require a separate density/CP-map profile",
+     "arbitrary rotations outside Clifford+T",
+     "provider execution or hardware fidelity"
+    ],
+    "document_sha256": "0a3defec354fb68764d37d5f303de464c7d3f68207e2ce33d5653716bb5af07c",
+    "normalized_ir": {
+     "circuit_id": "hf_a_k2_prep",
+     "classical_bits": [],
+     "initial_state": "zero",
+     "metadata": {
+      "name": "hf_a_k2_prep",
+      "scope": "LiH STO-3G (2e,2o) parity_tapered state preparation, angles m=[2, -1, -1] x 2pi/2^2"
+     },
+     "operations": [
+      {
+       "controls": [],
+       "gate": "sdg",
+       "kind": "gate",
+       "op_id": "g0",
+       "parameters": [],
+       "targets": [
+        "q0"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "h",
+       "kind": "gate",
+       "op_id": "g1",
+       "parameters": [],
+       "targets": [
+        "q0"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "z",
+       "kind": "gate",
+       "op_id": "g2",
+       "parameters": [],
+       "targets": [
+        "q0"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "h",
+       "kind": "gate",
+       "op_id": "g3",
+       "parameters": [],
+       "targets": [
+        "q0"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "s",
+       "kind": "gate",
+       "op_id": "g4",
+       "parameters": [],
+       "targets": [
+        "q0"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "sdg",
+       "kind": "gate",
+       "op_id": "g5",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "h",
+       "kind": "gate",
+       "op_id": "g6",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "s",
+       "kind": "gate",
+       "op_id": "g7",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "z",
+       "kind": "gate",
+       "op_id": "g8",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "h",
+       "kind": "gate",
+       "op_id": "g9",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "s",
+       "kind": "gate",
+       "op_id": "g10",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      },
+      {
+       "controls": [
+        "q0"
+       ],
+       "gate": "cx",
+       "kind": "gate",
+       "op_id": "g11",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "sdg",
+       "kind": "gate",
+       "op_id": "g12",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "h",
+       "kind": "gate",
+       "op_id": "g13",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "s",
+       "kind": "gate",
+       "op_id": "g14",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "z",
+       "kind": "gate",
+       "op_id": "g15",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "h",
+       "kind": "gate",
+       "op_id": "g16",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      },
+      {
+       "controls": [],
+       "gate": "s",
+       "kind": "gate",
+       "op_id": "g17",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      },
+      {
+       "controls": [
+        "q0"
+       ],
+       "gate": "cx",
+       "kind": "gate",
+       "op_id": "g18",
+       "parameters": [],
+       "targets": [
+        "q1"
+       ]
+      }
+     ],
+     "qubits": [
+      {
+       "id": "q0"
+      },
+      {
+       "id": "q1"
+      }
+     ],
+     "schema": "heyting.quantum_circuit_ir.v1",
+     "semantic_profile": "exact_clifford_t_v2"
+    },
+    "profile_admissible": true,
+    "profile_violations": [],
+    "schema": "heyting.quantum_circuit_validation_receipt.v1",
+    "semantic_profile": "exact_clifford_t_v2",
+    "structural_errors": [],
+    "structurally_valid": true
+   },
+   "normalized_circuit": {
+    "circuit_id": "hf_a_k2_prep",
+    "classical_bits": [],
+    "initial_state": "zero",
+    "metadata": {
+     "name": "hf_a_k2_prep",
+     "scope": "LiH STO-3G (2e,2o) parity_tapered state preparation, angles m=[2, -1, -1] x 2pi/2^2"
+    },
+    "operations": [
+     {
+      "controls": [],
+      "gate": "sdg",
+      "kind": "gate",
+      "op_id": "g0",
+      "parameters": [],
+      "targets": [
+       "q0"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "h",
+      "kind": "gate",
+      "op_id": "g1",
+      "parameters": [],
+      "targets": [
+       "q0"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "z",
+      "kind": "gate",
+      "op_id": "g2",
+      "parameters": [],
+      "targets": [
+       "q0"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "h",
+      "kind": "gate",
+      "op_id": "g3",
+      "parameters": [],
+      "targets": [
+       "q0"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "s",
+      "kind": "gate",
+      "op_id": "g4",
+      "parameters": [],
+      "targets": [
+       "q0"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "sdg",
+      "kind": "gate",
+      "op_id": "g5",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "h",
+      "kind": "gate",
+      "op_id": "g6",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "s",
+      "kind": "gate",
+      "op_id": "g7",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "z",
+      "kind": "gate",
+      "op_id": "g8",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "h",
+      "kind": "gate",
+      "op_id": "g9",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "s",
+      "kind": "gate",
+      "op_id": "g10",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     },
+     {
+      "controls": [
+       "q0"
+      ],
+      "gate": "cx",
+      "kind": "gate",
+      "op_id": "g11",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "sdg",
+      "kind": "gate",
+      "op_id": "g12",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "h",
+      "kind": "gate",
+      "op_id": "g13",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "s",
+      "kind": "gate",
+      "op_id": "g14",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "z",
+      "kind": "gate",
+      "op_id": "g15",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "h",
+      "kind": "gate",
+      "op_id": "g16",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     },
+     {
+      "controls": [],
+      "gate": "s",
+      "kind": "gate",
+      "op_id": "g17",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     },
+     {
+      "controls": [
+       "q0"
+      ],
+      "gate": "cx",
+      "kind": "gate",
+      "op_id": "g18",
+      "parameters": [],
+      "targets": [
+       "q1"
+      ]
+     }
+    ],
+    "qubits": [
+     {
+      "id": "q0"
+     },
+     {
+      "id": "q1"
+     }
+    ],
+    "schema": "heyting.quantum_circuit_ir.v1",
+    "semantic_profile": "exact_clifford_t_v2"
+   },
+   "requested_claims": {
+    "circuit_subject_sha256": "a272d51fc2ea1e18a4140539fdaa4a08048edf5024afc136b6c62a4b5b3cb030",
+    "claims": [
+     {
+      "accepted_evidence_tiers": [
+       "kernel_certified",
+       "checker_verified"
+      ],
+      "claim_id": "hf_a_k2_prep_well_formed",
+      "description": "The LiH Hartree-Fock state-preparation circuit is admitted by the exact Clifford+T profile.",
+      "statement": {
+       "claim_type": "well_formed",
+       "profile": "exact_clifford_t_v2"
+      }
+     },
+     {
+      "accepted_evidence_tiers": [
+       "kernel_certified",
+       "checker_verified"
+      ],
+      "claim_id": "hf_a_k2_prep_action",
+      "description": "The exact D[omega] matrix of the circuit is recomputed and proven unitary; its quotient forgets only unit global phase.",
+      "statement": {
+       "claim_type": "circuit_property",
+       "parameters": {},
+       "predicate": {
+        "name": "exact_unitary_action",
+        "namespace": "HeytingLean.Quantum.ProofCarrying",
+        "version": "v1"
+       },
+       "relation": "same_unitary_up_to_global_phase"
+      }
+     }
+    ],
+    "evidence": [],
+    "ledger_id": "hf_a_k2_prep_claims",
+    "metadata": {
+     "state": "obligations_only"
+    },
+    "schema": "heyting.quantum_claim_evidence.v1",
+    "semantic_profile": "exact_clifford_t_v2"
+   },
+   "requested_claims_sha256": "c9c50753c402cc145f61daf270a8b738dd058d751ade622616a27886aea2206d",
+   "schema": "heyting.quantum_proof_carrying_circuit_bundle.v1",
+   "vertical_slice": {
+    "circuit_validation": {
+     "canonicalization": "RFC8785-JCS-with-integer-only-JSON-numbers",
+     "circuit_subject_sha256": "a272d51fc2ea1e18a4140539fdaa4a08048edf5024afc136b6c62a4b5b3cb030",
+     "claim_boundary": [
+      "measurement semantics, which require a separate density/CP-map profile",
+      "arbitrary rotations outside Clifford+T",
+      "provider execution or hardware fidelity"
+     ],
+     "document_sha256": "0a3defec354fb68764d37d5f303de464c7d3f68207e2ce33d5653716bb5af07c",
+     "normalized_ir": {
+      "circuit_id": "hf_a_k2_prep",
+      "classical_bits": [],
+      "initial_state": "zero",
+      "metadata": {
+       "name": "hf_a_k2_prep",
+       "scope": "LiH STO-3G (2e,2o) parity_tapered state preparation, angles m=[2, -1, -1] x 2pi/2^2"
+      },
+      "operations": [
+       {
+        "controls": [],
+        "gate": "sdg",
+        "kind": "gate",
+        "op_id": "g0",
+        "parameters": [],
+        "targets": [
+         "q0"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "h",
+        "kind": "gate",
+        "op_id": "g1",
+        "parameters": [],
+        "targets": [
+         "q0"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "z",
+        "kind": "gate",
+        "op_id": "g2",
+        "parameters": [],
+        "targets": [
+         "q0"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "h",
+        "kind": "gate",
+        "op_id": "g3",
+        "parameters": [],
+        "targets": [
+         "q0"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "s",
+        "kind": "gate",
+        "op_id": "g4",
+        "parameters": [],
+        "targets": [
+         "q0"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "sdg",
+        "kind": "gate",
+        "op_id": "g5",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "h",
+        "kind": "gate",
+        "op_id": "g6",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "s",
+        "kind": "gate",
+        "op_id": "g7",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "z",
+        "kind": "gate",
+        "op_id": "g8",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "h",
+        "kind": "gate",
+        "op_id": "g9",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "s",
+        "kind": "gate",
+        "op_id": "g10",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       },
+       {
+        "controls": [
+         "q0"
+        ],
+        "gate": "cx",
+        "kind": "gate",
+        "op_id": "g11",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "sdg",
+        "kind": "gate",
+        "op_id": "g12",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "h",
+        "kind": "gate",
+        "op_id": "g13",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "s",
+        "kind": "gate",
+        "op_id": "g14",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "z",
+        "kind": "gate",
+        "op_id": "g15",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "h",
+        "kind": "gate",
+        "op_id": "g16",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       },
+       {
+        "controls": [],
+        "gate": "s",
+        "kind": "gate",
+        "op_id": "g17",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       },
+       {
+        "controls": [
+         "q0"
+        ],
+        "gate": "cx",
+        "kind": "gate",
+        "op_id": "g18",
+        "parameters": [],
+        "targets": [
+         "q1"
+        ]
+       }
+      ],
+      "qubits": [
+       {
+        "id": "q0"
+       },
+       {
+        "id": "q1"
+       }
+      ],
+      "schema": "heyting.quantum_circuit_ir.v1",
+      "semantic_profile": "exact_clifford_t_v2"
+     },
+     "profile_admissible": true,
+     "profile_violations": [],
+     "schema": "heyting.quantum_circuit_validation_receipt.v1",
+     "semantic_profile": "exact_clifford_t_v2",
+     "structural_errors": [],
+     "structurally_valid": true
+    },
+    "claim_evaluations": [
+     {
+      "claim_id": "hf_a_k2_prep_well_formed",
+      "claim_sha256": "250645251501e6210e405fb7a8d036dc8d69c2005f532aa25e8d5f5958768e1f",
+      "dependency_ids": [
+       "circuit_subject_sha256",
+       "profile_admissibility"
+      ],
+      "evaluation": "satisfied",
+      "evaluator": "heyting_exact_domega_unitary_interpreter",
+      "explanation": "the bound circuit passed structural and active-profile admissibility checks",
+      "final_action_sha256": "2e409af77aa3542f1f7ab668d8b600b066d040f7d4217b0b08384eb5a8d4a841",
+      "limitations": [
+       "this row is an executable evaluation, not an evidence record",
+       "digest-bound qpcert replay must attach theorem-specific evidence before kernel_certified appears"
+      ],
+      "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd"
+     },
+     {
+      "claim_id": "hf_a_k2_prep_action",
+      "claim_sha256": "f3f797605bcf8214daff56944cd4bd9ff82e07ffbfa10cf5b0e4b5ee176feae0",
+      "dependency_ids": [
+       "circuit_subject_sha256",
+       "exact_dagger_unitarity",
+       "global_phase_quotient_fingerprint"
+      ],
+      "evaluation": "satisfied",
+      "evaluator": "heyting_exact_domega_unitary_interpreter",
+      "explanation": "the selected exact evaluator constructs the profile's versioned scalar matrix, checks U†U=I, and derives the division-free global-phase quotient fingerprint",
+      "final_action_sha256": "2e409af77aa3542f1f7ab668d8b600b066d040f7d4217b0b08384eb5a8d4a841",
+      "limitations": [
+       "this row is an executable evaluation, not an evidence record",
+       "digest-bound qpcert replay must attach theorem-specific evidence before kernel_certified appears"
+      ],
+      "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd"
+     }
+    ],
+    "claims_contract": {
+     "accepted_evidence_coverage": [
+      {
+       "claim_id": "hf_a_k2_prep_well_formed",
+       "conclusive_evidence_count": 0,
+       "conflict": false,
+       "inconclusive_tiers": [],
+       "refuting_tiers": [],
+       "supporting_tiers": []
+      },
+      {
+       "claim_id": "hf_a_k2_prep_action",
+       "conclusive_evidence_count": 0,
+       "conflict": false,
+       "inconclusive_tiers": [],
+       "refuting_tiers": [],
+       "supporting_tiers": []
+      }
+     ],
+     "circuit_subject_sha256": "a272d51fc2ea1e18a4140539fdaa4a08048edf5024afc136b6c62a4b5b3cb030",
+     "conflicting_claim_ids": [],
+     "contract_structurally_valid": true,
+     "errors": [],
+     "limitations": [
+      "contract_structurally_valid means schema/custody/trust-policy validity, not mathematical truth",
+      "accepted_evidence_coverage is empty whenever the contract is structurally invalid",
+      "evidence tiers are intentionally not collapsed into a total order or global verdict",
+      "a theorem name without a digest-bound per-instance artifact does not earn kernel_certified"
+     ],
+     "schema": "heyting.quantum_claim_validation_receipt.v1",
+     "semantic_profile": "exact_clifford_t_v2",
+     "unevidenced_claim_ids": [
+      "hf_a_k2_prep_well_formed",
+      "hf_a_k2_prep_action"
+     ]
+    },
+    "limitations": [
+     "complete means the selected deterministic semantic pipeline ran; it is not a mathematical truth value or evidence tier",
+     "kernel certification is claim-indexed and exists only after a qpcert is reconstructed and replayed"
+    ],
+    "schema": "heyting.quantum_vertical_slice_receipt.v1",
+    "semantic_analysis": {
+     "action_digest_encoding": "qcir-exact-domega-v1:normalized-four-integers+power-of-two-denominator+little-endian-basis",
+     "authority_boundary": "deterministic exact D[omega] matrix interpretation; proof tier requires qpcert replay",
+     "circuit_subject_sha256": "a272d51fc2ea1e18a4140539fdaa4a08048edf5024afc136b6c62a4b5b3cb030",
+     "errors": [],
+     "final_action": {
+      "basis_order": "little_endian_declared_qubit_order",
+      "dimension": 4,
+      "matrix": [
+       [
+        {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        {
+         "coefficients": [
+          "-1",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        }
+       ],
+       [
+        {
+         "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        }
+       ],
+       [
+        {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        {
+         "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        }
+       ],
+       [
+        {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        {
+         "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        }
+       ]
+      ],
+      "projective_action_sha256": "99e2b8e3b6e444cd45960b3aec7432687387fc81d75cc837a6ef7f9d64698935",
+      "projective_pivot": 3,
+      "qubits": [
+       "q0",
+       "q1"
+      ],
+      "scalar_carrier": "D[omega]={(a+b*omega+c*omega^2+d*omega^3)/2^k | a,b,c,d in Z, k in N, omega^4=-1}",
+      "zero_state_reduced_bloch": [
+       {
+        "qubit": "q0",
+        "x": {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        "y": {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        "z": {
+         "coefficients": [
+          "-1",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        }
+       },
+       {
+        "qubit": "q1",
+        "x": {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        "y": {
+         "coefficients": [
+          "0",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        },
+        "z": {
+         "coefficients": [
+          "1",
+          "0",
+          "0",
+          "0"
+         ],
+         "denominator_exponent": 0
+        }
+       }
+      ]
+     },
+     "final_action_sha256": "2e409af77aa3542f1f7ab668d8b600b066d040f7d4217b0b08384eb5a8d4a841",
+     "interpreter_id": "heyting_exact_domega_unitary_interpreter",
+     "interpreter_implementation_sha256": "4654b98ca8e4646b11f4b151a76fdfb0db67b2538facbe9dead986e18809db6b",
+     "interpreter_version": "0.2.0",
+     "invariants": [
+      {
+       "evaluation": "satisfied",
+       "explanation": "the exact normalized D[omega] product U†U equals the identity matrix entrywise",
+       "invariant_id": "exact_dagger_unitarity",
+       "witness_sha256": "2e1b3a59c207c1bc8fea6c53bf0db5792a8425db3ba67cb831f9a7e85f1a2677"
+      },
+      {
+       "evaluation": "satisfied",
+       "explanation": "each entry is multiplied by the conjugate of the first nonzero pivot; multiplication by any exact unit scalar cancels without division",
+       "invariant_id": "global_phase_quotient_fingerprint",
+       "witness_sha256": "99e2b8e3b6e444cd45960b3aec7432687387fc81d75cc837a6ef7f9d64698935"
+      }
+     ],
+     "limitations": [
+      "matrix growth is exponential and bounded to six qubits",
+      "the projective digest identifies the implemented exact unitary action up to unit global phase; it is not a provider-fidelity claim"
+     ],
+     "operation_trace": [
+      {
+       "after_action_sha256": "d2fdf9fbd1db496fee4371b0cf254737f68929e0275490dc3c31047eb3057653",
+       "before_action_sha256": "2e1b3a59c207c1bc8fea6c53bf0db5792a8425db3ba67cb831f9a7e85f1a2677",
+       "changed_rows": 2,
+       "op_id": "g0",
+       "operation_index": 0,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::Sdg(q0)"
+       ]
+      },
+      {
+       "after_action_sha256": "f9d656dabe5ac30679e677c18f79b3d9fee89376fb5edd70ed67552c0c6dd785",
+       "before_action_sha256": "d2fdf9fbd1db496fee4371b0cf254737f68929e0275490dc3c31047eb3057653",
+       "changed_rows": 8,
+       "op_id": "g1",
+       "operation_index": 1,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::H(q0)"
+       ]
+      },
+      {
+       "after_action_sha256": "51487822344407e2f20ad26653cfe82b85b1199ae0c1d11e035a1347234af605",
+       "before_action_sha256": "f9d656dabe5ac30679e677c18f79b3d9fee89376fb5edd70ed67552c0c6dd785",
+       "changed_rows": 4,
+       "op_id": "g2",
+       "operation_index": 2,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::Z(q0)"
+       ]
+      },
+      {
+       "after_action_sha256": "4696cf7ece0592aa2132351e286dde91935fe7e74f9dfe6625744d9b99fe95b2",
+       "before_action_sha256": "51487822344407e2f20ad26653cfe82b85b1199ae0c1d11e035a1347234af605",
+       "changed_rows": 8,
+       "op_id": "g3",
+       "operation_index": 3,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::H(q0)"
+       ]
+      },
+      {
+       "after_action_sha256": "df7ec4a3e30631bfeaaabca807cd654fe3973e62b9bdc1e540312f88c461bbd2",
+       "before_action_sha256": "4696cf7ece0592aa2132351e286dde91935fe7e74f9dfe6625744d9b99fe95b2",
+       "changed_rows": 2,
+       "op_id": "g4",
+       "operation_index": 4,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::S(q0)"
+       ]
+      },
+      {
+       "after_action_sha256": "1187d6a2c45a964793313b469958213f0061937ed6840b2be2b9e47eef797274",
+       "before_action_sha256": "df7ec4a3e30631bfeaaabca807cd654fe3973e62b9bdc1e540312f88c461bbd2",
+       "changed_rows": 2,
+       "op_id": "g5",
+       "operation_index": 5,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::Sdg(q1)"
+       ]
+      },
+      {
+       "after_action_sha256": "d668b35a0e6b8308b57b43d00f6bb1929219a8a9dbbf6494d3b612f0305cfe2f",
+       "before_action_sha256": "1187d6a2c45a964793313b469958213f0061937ed6840b2be2b9e47eef797274",
+       "changed_rows": 8,
+       "op_id": "g6",
+       "operation_index": 6,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::H(q1)"
+       ]
+      },
+      {
+       "after_action_sha256": "827f96b5a927bc4772757cc82418fbbc4444d0920f1fff174e257b0f46278ec0",
+       "before_action_sha256": "d668b35a0e6b8308b57b43d00f6bb1929219a8a9dbbf6494d3b612f0305cfe2f",
+       "changed_rows": 4,
+       "op_id": "g7",
+       "operation_index": 7,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::S(q1)"
+       ]
+      },
+      {
+       "after_action_sha256": "190229bc6ee12c458fc471d1a76009d93f3deed2b879775d2be6eef4faf73e31",
+       "before_action_sha256": "827f96b5a927bc4772757cc82418fbbc4444d0920f1fff174e257b0f46278ec0",
+       "changed_rows": 4,
+       "op_id": "g8",
+       "operation_index": 8,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::Z(q1)"
+       ]
+      },
+      {
+       "after_action_sha256": "2ed4634d0534187fd4f6efc7d7cbccbd9e4d19a84b742671001e48b31ffc8588",
+       "before_action_sha256": "190229bc6ee12c458fc471d1a76009d93f3deed2b879775d2be6eef4faf73e31",
+       "changed_rows": 8,
+       "op_id": "g9",
+       "operation_index": 9,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::H(q1)"
+       ]
+      },
+      {
+       "after_action_sha256": "1e727e26ae67ebe7f9e9db0c96f6320e0cbdc58aa86fe6dc409be650ca899109",
+       "before_action_sha256": "2ed4634d0534187fd4f6efc7d7cbccbd9e4d19a84b742671001e48b31ffc8588",
+       "changed_rows": 4,
+       "op_id": "g10",
+       "operation_index": 10,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::S(q1)"
+       ]
+      },
+      {
+       "after_action_sha256": "5ae36bee0711213486472f9b50acdfadec2d116e0bdb5973d22aa2fff25b881a",
+       "before_action_sha256": "1e727e26ae67ebe7f9e9db0c96f6320e0cbdc58aa86fe6dc409be650ca899109",
+       "changed_rows": 2,
+       "op_id": "g11",
+       "operation_index": 11,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::Cx(q0,q1)"
+       ]
+      },
+      {
+       "after_action_sha256": "4a0c4d3ebafc238639e8236b578f7cecf13b0cc0e60f37b654e515fa76468caa",
+       "before_action_sha256": "5ae36bee0711213486472f9b50acdfadec2d116e0bdb5973d22aa2fff25b881a",
+       "changed_rows": 4,
+       "op_id": "g12",
+       "operation_index": 12,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::Sdg(q1)"
+       ]
+      },
+      {
+       "after_action_sha256": "1bd735339311c6b4bfc60ad83206b7b66ee0e30725c8aefb7043c4dc31849aec",
+       "before_action_sha256": "4a0c4d3ebafc238639e8236b578f7cecf13b0cc0e60f37b654e515fa76468caa",
+       "changed_rows": 8,
+       "op_id": "g13",
+       "operation_index": 13,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::H(q1)"
+       ]
+      },
+      {
+       "after_action_sha256": "04f60f30518b51ad581ce04a39b20e3404d3395c7a93711afd65ab803835e384",
+       "before_action_sha256": "1bd735339311c6b4bfc60ad83206b7b66ee0e30725c8aefb7043c4dc31849aec",
+       "changed_rows": 4,
+       "op_id": "g14",
+       "operation_index": 14,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::S(q1)"
+       ]
+      },
+      {
+       "after_action_sha256": "c88f932509e9a7119c3199a1e49b8ab29be251bf1486e24ff62c5e6d7dd18fff",
+       "before_action_sha256": "04f60f30518b51ad581ce04a39b20e3404d3395c7a93711afd65ab803835e384",
+       "changed_rows": 4,
+       "op_id": "g15",
+       "operation_index": 15,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::Z(q1)"
+       ]
+      },
+      {
+       "after_action_sha256": "c4ea80ee1a569d0cabfe5ad61bd0e6c679da111eabf863449e8f4fb85803b711",
+       "before_action_sha256": "c88f932509e9a7119c3199a1e49b8ab29be251bf1486e24ff62c5e6d7dd18fff",
+       "changed_rows": 8,
+       "op_id": "g16",
+       "operation_index": 16,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::H(q1)"
+       ]
+      },
+      {
+       "after_action_sha256": "5b070229ca062dec6a040c2fe6d04682b7e004cd61007ff2e7999844c618a89b",
+       "before_action_sha256": "c4ea80ee1a569d0cabfe5ad61bd0e6c679da111eabf863449e8f4fb85803b711",
+       "changed_rows": 2,
+       "op_id": "g17",
+       "operation_index": 17,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::S(q1)"
+       ]
+      },
+      {
+       "after_action_sha256": "0202eefe3acc37cc78d9ee1989daa924535074cb3b672bdcb469ab18083ce9a8",
+       "before_action_sha256": "5b070229ca062dec6a040c2fe6d04682b7e004cd61007ff2e7999844c618a89b",
+       "changed_rows": 4,
+       "op_id": "g18",
+       "operation_index": 18,
+       "operation_kind": "gate",
+       "primitive_expansion": [
+        "domega::Cx(q0,q1)"
+       ]
+      }
+     ],
+     "schema": "heyting.quantum_semantic_analysis.v1",
+     "semantic_profile": "exact_clifford_t_v2",
+     "state": "complete"
+    },
+    "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+    "state": "complete",
+    "visualization": {
+     "pack": {
+      "circuit_subject_sha256": "a272d51fc2ea1e18a4140539fdaa4a08048edf5024afc136b6c62a4b5b3cb030",
+      "projections": [
+       {
+        "displayed_tier": "replayed",
+        "evidence_tier": "replayed",
+        "lens": "wire_circuit",
+        "limitations": [
+         "wire geometry is logical; provider placement is not claimed"
+        ],
+        "payload": {
+         "operations": [
+          {
+           "controls": [],
+           "gate": "sdg",
+           "index": 0,
+           "kind": "gate",
+           "op_id": "g0",
+           "targets": [
+            "q0"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "h",
+           "index": 1,
+           "kind": "gate",
+           "op_id": "g1",
+           "targets": [
+            "q0"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "z",
+           "index": 2,
+           "kind": "gate",
+           "op_id": "g2",
+           "targets": [
+            "q0"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "h",
+           "index": 3,
+           "kind": "gate",
+           "op_id": "g3",
+           "targets": [
+            "q0"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "s",
+           "index": 4,
+           "kind": "gate",
+           "op_id": "g4",
+           "targets": [
+            "q0"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "sdg",
+           "index": 5,
+           "kind": "gate",
+           "op_id": "g5",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "h",
+           "index": 6,
+           "kind": "gate",
+           "op_id": "g6",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "s",
+           "index": 7,
+           "kind": "gate",
+           "op_id": "g7",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "z",
+           "index": 8,
+           "kind": "gate",
+           "op_id": "g8",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "h",
+           "index": 9,
+           "kind": "gate",
+           "op_id": "g9",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "s",
+           "index": 10,
+           "kind": "gate",
+           "op_id": "g10",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [
+            "q0"
+           ],
+           "gate": "cx",
+           "index": 11,
+           "kind": "gate",
+           "op_id": "g11",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "sdg",
+           "index": 12,
+           "kind": "gate",
+           "op_id": "g12",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "h",
+           "index": 13,
+           "kind": "gate",
+           "op_id": "g13",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "s",
+           "index": 14,
+           "kind": "gate",
+           "op_id": "g14",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "z",
+           "index": 15,
+           "kind": "gate",
+           "op_id": "g15",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "h",
+           "index": 16,
+           "kind": "gate",
+           "op_id": "g16",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "s",
+           "index": 17,
+           "kind": "gate",
+           "op_id": "g17",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [
+            "q0"
+           ],
+           "gate": "cx",
+           "index": 18,
+           "kind": "gate",
+           "op_id": "g18",
+           "targets": [
+            "q1"
+           ]
+          }
+         ],
+         "wires": [
+          "q0",
+          "q1"
+         ]
+        },
+        "relation": "digest_bound_projection",
+        "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+        "state": "rendered"
+       },
+       {
+        "displayed_tier": "replayed",
+        "evidence_tier": "replayed",
+        "lens": "reduced_bloch",
+        "limitations": [
+         "coordinates use D[omega]={(a+b*omega+c*omega^2+d*omega^3)/2^k | a,b,c,d in Z, k in N, omega^4=-1}; no floating-point sphere embedding is asserted"
+        ],
+        "payload": {
+         "state": "U|zero>",
+         "vectors": [
+          {
+           "qubit": "q0",
+           "x": {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           "y": {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           "z": {
+            "coefficients": [
+             "-1",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           }
+          },
+          {
+           "qubit": "q1",
+           "x": {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           "y": {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           "z": {
+            "coefficients": [
+             "1",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           }
+          }
+         ]
+        },
+        "relation": "digest_bound_projection",
+        "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+        "state": "rendered"
+       },
+       {
+        "displayed_tier": "fenced",
+        "evidence_tier": "fenced",
+        "lens": "pauli_correlation",
+        "limitations": [
+         "the unsigned-Pauli support projection is specific to the unsigned symplectic carrier"
+        ],
+        "payload": null,
+        "relation": null,
+        "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+        "state": "outside_profile"
+       },
+       {
+        "displayed_tier": "fenced",
+        "evidence_tier": "fenced",
+        "lens": "unsigned_symplectic",
+        "limitations": [
+         "the selected profile retains phase or density data and is not projected to unsigned support implicitly"
+        ],
+        "payload": null,
+        "relation": null,
+        "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+        "state": "outside_profile"
+       },
+       {
+        "displayed_tier": "replayed",
+        "evidence_tier": "replayed",
+        "lens": "proof_dag",
+        "limitations": [
+         "claim-evaluation nodes have no evidence tier until evidence records are attached"
+        ],
+        "payload": {
+         "edges": [
+          {
+           "relation": "interpreted_by",
+           "source": "circuit_subject",
+           "target": "semantic_action"
+          },
+          {
+           "relation": "evaluates",
+           "source": "semantic_action",
+           "target": "invariant:exact_dagger_unitarity"
+          },
+          {
+           "relation": "evaluates",
+           "source": "semantic_action",
+           "target": "invariant:global_phase_quotient_fingerprint"
+          },
+          {
+           "relation": "projects_to",
+           "source": "semantic_action",
+           "target": "claim:hf_a_k2_prep_well_formed"
+          },
+          {
+           "relation": "projects_to",
+           "source": "semantic_action",
+           "target": "claim:hf_a_k2_prep_action"
+          }
+         ],
+         "nodes": [
+          {
+           "label": "hf_a_k2_prep",
+           "node_id": "circuit_subject",
+           "node_kind": "input"
+          },
+          {
+           "label": "2e409af77aa3542f1f7ab668d8b600b066d040f7d4217b0b08384eb5a8d4a841",
+           "node_id": "semantic_action",
+           "node_kind": "deterministic_interpretation"
+          },
+          {
+           "evaluation": "satisfied",
+           "label": "exact_dagger_unitarity",
+           "node_id": "invariant:exact_dagger_unitarity",
+           "node_kind": "executable_invariant"
+          },
+          {
+           "evaluation": "satisfied",
+           "label": "global_phase_quotient_fingerprint",
+           "node_id": "invariant:global_phase_quotient_fingerprint",
+           "node_kind": "executable_invariant"
+          },
+          {
+           "evaluation": "satisfied",
+           "evidence_tier": null,
+           "label": "hf_a_k2_prep_well_formed",
+           "node_id": "claim:hf_a_k2_prep_well_formed",
+           "node_kind": "claim_evaluation"
+          },
+          {
+           "evaluation": "satisfied",
+           "evidence_tier": null,
+           "label": "hf_a_k2_prep_action",
+           "node_id": "claim:hf_a_k2_prep_action",
+           "node_kind": "claim_evaluation"
+          }
+         ]
+        },
+        "relation": "digest_bound_projection",
+        "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+        "state": "rendered"
+       },
+       {
+        "displayed_tier": "replayed",
+        "evidence_tier": "replayed",
+        "lens": "native_cayley",
+        "limitations": [
+         "this is the exact gate word in the native Cayley alphabet; no geodesic or optimality claim is made"
+        ],
+        "payload": {
+         "alphabet": [
+          "h",
+          "s",
+          "t",
+          "rzk",
+          "crk",
+          "cx"
+         ],
+         "claim": "presented_word_only",
+         "word": [
+          {
+           "controls": [],
+           "gate": "sdg",
+           "targets": [
+            "q0"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "h",
+           "targets": [
+            "q0"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "z",
+           "targets": [
+            "q0"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "h",
+           "targets": [
+            "q0"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "s",
+           "targets": [
+            "q0"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "sdg",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "h",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "s",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "z",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "h",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "s",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [
+            "q0"
+           ],
+           "gate": "cx",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "sdg",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "h",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "s",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "z",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "h",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [],
+           "gate": "s",
+           "targets": [
+            "q1"
+           ]
+          },
+          {
+           "controls": [
+            "q0"
+           ],
+           "gate": "cx",
+           "targets": [
+            "q1"
+           ]
+          }
+         ]
+        },
+        "relation": "digest_bound_projection",
+        "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+        "state": "rendered"
+       },
+       {
+        "displayed_tier": "fenced",
+        "evidence_tier": "fenced",
+        "lens": "topological_homology",
+        "limitations": [
+         "the topological lens currently consumes the stabilizer/CSS carrier"
+        ],
+        "payload": null,
+        "relation": null,
+        "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+        "state": "outside_profile"
+       },
+       {
+        "displayed_tier": "fenced",
+        "evidence_tier": "fenced",
+        "lens": "provider_layout",
+        "limitations": [
+         "provider layout requires a target backend and lowering receipt"
+        ],
+        "payload": null,
+        "relation": null,
+        "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+        "state": "deferred"
+       },
+       {
+        "displayed_tier": "replayed",
+        "evidence_tier": "replayed",
+        "lens": "exact_unitary",
+        "limitations": [
+         "entries use D[omega]={(a+b*omega+c*omega^2+d*omega^3)/2^k | a,b,c,d in Z, k in N, omega^4=-1}; the projective digest forgets only unit global phase"
+        ],
+        "payload": {
+         "basis_order": "little_endian_declared_qubit_order",
+         "dimension": 4,
+         "invariants": [
+          {
+           "evaluation": "satisfied",
+           "explanation": "the exact normalized D[omega] product U†U equals the identity matrix entrywise",
+           "invariant_id": "exact_dagger_unitarity",
+           "witness_sha256": "2e1b3a59c207c1bc8fea6c53bf0db5792a8425db3ba67cb831f9a7e85f1a2677"
+          },
+          {
+           "evaluation": "satisfied",
+           "explanation": "each entry is multiplied by the conjugate of the first nonzero pivot; multiplication by any exact unit scalar cancels without division",
+           "invariant_id": "global_phase_quotient_fingerprint",
+           "witness_sha256": "99e2b8e3b6e444cd45960b3aec7432687387fc81d75cc837a6ef7f9d64698935"
+          }
+         ],
+         "matrix": [
+          [
+           {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           {
+            "coefficients": [
+             "-1",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           }
+          ],
+          [
+           {
+            "coefficients": [
+             "1",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           }
+          ],
+          [
+           {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           {
+            "coefficients": [
+             "1",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           }
+          ],
+          [
+           {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           {
+            "coefficients": [
+             "1",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           },
+           {
+            "coefficients": [
+             "0",
+             "0",
+             "0",
+             "0"
+            ],
+            "denominator_exponent": 0
+           }
+          ]
+         ],
+         "projective_action_sha256": "99e2b8e3b6e444cd45960b3aec7432687387fc81d75cc837a6ef7f9d64698935",
+         "projective_pivot": 3
+        },
+        "relation": "digest_bound_projection",
+        "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+        "state": "rendered"
+       },
+       {
+        "displayed_tier": "fenced",
+        "evidence_tier": "fenced",
+        "lens": "measurement_instrument",
+        "limitations": [
+         "the selected carrier has no outcome-indexed density action"
+        ],
+        "payload": null,
+        "relation": null,
+        "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+        "state": "outside_profile"
+       },
+       {
+        "displayed_tier": "fenced",
+        "evidence_tier": "fenced",
+        "lens": "noise",
+        "limitations": [
+         "the certified reference noise contraction applies to the Clifford+Pauli fragment"
+        ],
+        "payload": null,
+        "relation": null,
+        "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+        "state": "outside_profile"
+       },
+       {
+        "displayed_tier": "replayed",
+        "evidence_tier": "replayed",
+        "lens": "synthesis_family",
+        "limitations": [
+         "family evidence is signature/path-sum scoped and does not claim global circuit optimality"
+        ],
+        "payload": {
+         "family": "exact_gate_word",
+         "fragment": "exact_clifford_t_word",
+         "lean_authorities": [
+          "HeytingLean.Quantum.CertifiedStack.SynthesisPathSum.qsynthBenchmarkCoverage_all_closed",
+          "HeytingLean.Quantum.CertifiedStack.SynthesisPathSum.qsynthBenchmarkCoverage_all_reasoned"
+         ],
+         "phase_levels": [],
+         "width": 2,
+         "word_length": 19
+        },
+        "relation": "digest_bound_projection",
+        "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+        "state": "rendered"
+       },
+       {
+        "displayed_tier": "replayed",
+        "evidence_tier": "replayed",
+        "lens": "transpile_receipt",
+        "limitations": [
+         "only named exact rewrite rules receive preservation authority; an empty rule list is the identity normal form"
+        ],
+        "payload": {
+         "confluence_authority": "HeytingLean.Quantum.CertifiedStack.RewriteConfluence.receipt_unique",
+         "congruence_authority": "HeytingLean.Quantum.CertifiedStack.TranspileStateRewrites.rewrite_two_sided_matrix",
+         "disclosure": "candidate discovery is executable; semantic preservation is supplied only by the named two-sided Lean rules",
+         "input_word_length": 19,
+         "rules": [],
+         "status": "identity_normal_form"
+        },
+        "relation": "digest_bound_projection",
+        "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd",
+        "state": "rendered"
+       }
+      ],
+      "schema": "heyting.quantum_visualization_pack.v1",
+      "semantic_analysis_sha256": "267b6afa5b1fa80866103ef8973d0bfdb828374d858b19d9d9d72e789d423fcd"
+     },
+     "pack_sha256": "ef467a548094cbd4a3e1f5b28605e4444b8350ab3da0752a3cfbed6213223e7e"
+    }
+   },
+   "certificate_summary": {
+    "certificate_id": "qpcert_a272d51fc2ea1e18",
+    "certificate_sha256": "858914ff6b8aae5b2d417ae8684c97bd76c1b07771dfc47fe705cb36f1d408bd",
+    "semantic_profile": "exact_clifford_t_v2",
+    "circuit_subject_sha256": "a272d51fc2ea1e18a4140539fdaa4a08048edf5024afc136b6c62a4b5b3cb030",
+    "requested_claims_sha256": "c9c50753c402cc145f61daf270a8b738dd058d751ade622616a27886aea2206d",
+    "certified_claim_ids": [
+     "hf_a_k2_prep_action",
+     "hf_a_k2_prep_well_formed"
+    ],
+    "artifact_count": 11
+   },
+   "certificate_file": {
+    "file_id": "d8092f67-5b11-4127-9fc2-0d29378eb819",
+    "filename": "qpcert_a272d51fc2ea1e18.qpcert",
+    "content_type": "application/vnd.heyting.qpcert+json",
+    "size_bytes": 112176,
+    "expiration_date": "2026-10-29T22:17:57.732825",
+    "certificate_id": "qpcert_a272d51fc2ea1e18",
+    "certificate_sha256": "858914ff6b8aae5b2d417ae8684c97bd76c1b07771dfc47fe705cb36f1d408bd",
+    "semantic_profile": "exact_clifford_t_v2",
+    "circuit_subject_sha256": "a272d51fc2ea1e18a4140539fdaa4a08048edf5024afc136b6c62a4b5b3cb030",
+    "requested_claims_sha256": "c9c50753c402cc145f61daf270a8b738dd058d751ade622616a27886aea2206d",
+    "certified_claim_ids": [
+     "hf_a_k2_prep_action",
+     "hf_a_k2_prep_well_formed"
+    ],
+    "artifact_count": 11
+   }
+  },
+  "schema": "heyting.quantum_service_response.v1",
+  "service_version": "0.2.0",
+  "status": "complete"
+ }
+}

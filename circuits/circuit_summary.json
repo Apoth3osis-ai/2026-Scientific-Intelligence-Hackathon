@@ -1,0 +1,177 @@
+[
+ {
+  "name": "hf_a_k2",
+  "K": 2,
+  "m": [
+   2,
+   -1,
+   -1
+  ],
+  "semantic_profile": "exact_clifford_t_v2",
+  "gate_count": 19,
+  "cnot_count": 2,
+  "t_count": 0,
+  "rzk_count": 0,
+  "statevector_q0q1": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    -0.0
+   ],
+   [
+    1.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.0
+   ]
+  ],
+  "energy_hartree": -7.863357621535111,
+  "exact_ground_hartree": -7.863579821677111,
+  "R_ref": 1.5
+ },
+ {
+  "name": "r2p50_k5",
+  "K": 5,
+  "m": [
+   15,
+   -5,
+   27
+  ],
+  "semantic_profile": "exact_cyclotomic_2k_v1",
+  "gate_count": 26,
+  "cnot_count": 2,
+  "t_count": 1,
+  "rzk_count": 6,
+  "statevector_q0q1": [
+   [
+    0.048025380063,
+    0.025670100452
+   ],
+   [
+    -0.071875060556,
+    -0.038418020264
+   ],
+   [
+    0.877674572407,
+    0.469126832692
+   ],
+   [
+    -0.0,
+    0.0
+   ]
+  ],
+  "energy_hartree": -7.773242332029348,
+  "exact_ground_hartree": -7.773544133674271,
+  "R_ref": 2.5
+ },
+ {
+  "name": "r3p00_k5",
+  "K": 5,
+  "m": [
+   13,
+   -4,
+   26
+  ],
+  "semantic_profile": "exact_cyclotomic_2k_v1",
+  "gate_count": 23,
+  "cnot_count": 2,
+  "t_count": 2,
+  "rzk_count": 2,
+  "statevector_q0q1": [
+   [
+    0.154329141909,
+    0.046815233382
+   ],
+   [
+    -0.230969883128,
+    -0.07006394806
+   ],
+   [
+    0.898139218626,
+    0.272447553388
+   ],
+   [
+    0.178650998213,
+    0.054193187831
+   ]
+  ],
+  "energy_hartree": -7.7264198537908815,
+  "exact_ground_hartree": -7.72642814025054,
+  "R_ref": 3.0
+ },
+ {
+  "name": "r1p50_k8",
+  "K": 8,
+  "m": [
+   126,
+   -51,
+   -52
+  ],
+  "semantic_profile": "exact_cyclotomic_2k_v1",
+  "gate_count": 29,
+  "cnot_count": 2,
+  "t_count": 1,
+  "rzk_count": 9,
+  "statevector_q0q1": [
+   [
+    0.007118323973,
+    0.002064275699
+   ],
+   [
+    -0.022469561465,
+    -0.006516052076
+   ],
+   [
+    0.960068958829,
+    0.278414838758
+   ],
+   [
+    0.011782410179,
+    0.003416835635
+   ]
+  ],
+  "energy_hartree": -7.863558652862385,
+  "exact_ground_hartree": -7.863579821677111,
+  "R_ref": 1.5
+ },
+ {
+  "name": "r3p00_k8",
+  "K": 8,
+  "m": [
+   103,
+   -31,
+   210
+  ],
+  "semantic_profile": "exact_cyclotomic_2k_v1",
+  "gate_count": 27,
+  "cnot_count": 2,
+  "t_count": 2,
+  "rzk_count": 6,
+  "statevector_q0q1": [
+   [
+    0.167985244483,
+    0.055494828829
+   ],
+   [
+    -0.23240926688,
+    -0.076777651058
+   ],
+   [
+    0.889898190163,
+    0.293982652409
+   ],
+   [
+    0.165686050074,
+    0.054735277593
+   ]
+  ],
+  "energy_hartree": -7.7264195807098455,
+  "exact_ground_hartree": -7.72642814025054,
+  "R_ref": 3.0
+ }
+]

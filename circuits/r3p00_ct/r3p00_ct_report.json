@@ -1,0 +1,126 @@
+{
+ "name": "r3p00_ct",
+ "R_angstrom": 3.0,
+ "semantic_profile": "exact_clifford_t_v2",
+ "method": "Matsumoto-Amano normal-form enumeration, up to 8 syllables per slot, 5 closest words per T count per slot, exact energy scoring; ties within 1e-09 Ha broken by T count, then gate count, then enumeration order",
+ "tied_candidates": 64,
+ "slot_words_time_order": {
+  "q0_U0": [
+   "H",
+   "T",
+   "H",
+   "S",
+   "T",
+   "H",
+   "T",
+   "H",
+   "T",
+   "H",
+   "T",
+   "H",
+   "T",
+   "H",
+   "S",
+   "T",
+   "H",
+   "Z",
+   "T",
+   "H",
+   "Z"
+  ],
+  "q1_Ua": [
+   "H",
+   "T",
+   "H",
+   "Sdg"
+  ],
+  "q1_Ub": [
+   "S",
+   "T",
+   "H",
+   "T",
+   "H",
+   "S",
+   "T",
+   "H",
+   "T",
+   "H",
+   "S",
+   "T",
+   "H",
+   "T",
+   "H",
+   "T",
+   "H",
+   "T",
+   "H",
+   "Sdg"
+  ]
+ },
+ "gate_count": 47,
+ "cnot_count": 2,
+ "t_count": 17,
+ "energy_hartree": -7.726362247146721,
+ "exact_ground_hartree": -7.7264281402505395,
+ "dE_mHa": 0.06589310381865943,
+ "statevector_q0q1": [
+  [
+   0.150428390593,
+   0.045304608385
+  ],
+  [
+   -0.214498782209,
+   -0.088848304703
+  ],
+  [
+   0.882122564417,
+   0.328775477505
+  ],
+  [
+   0.162722086912,
+   0.093290042945
+  ]
+ ],
+ "t_count_front": [
+  {
+   "t_count": 0,
+   "dE_mHa": 15.598240033316557
+  },
+  {
+   "t_count": 1,
+   "dE_mHa": 11.512695180461385
+  },
+  {
+   "t_count": 2,
+   "dE_mHa": 4.8434501213847625
+  },
+  {
+   "t_count": 3,
+   "dE_mHa": 2.1445477050621164
+  },
+  {
+   "t_count": 5,
+   "dE_mHa": 1.9076249082798924
+  },
+  {
+   "t_count": 8,
+   "dE_mHa": 0.782289028431471
+  },
+  {
+   "t_count": 11,
+   "dE_mHa": 0.5309452819801663
+  },
+  {
+   "t_count": 13,
+   "dE_mHa": 0.24180141591045867
+  },
+  {
+   "t_count": 16,
+   "dE_mHa": 0.1297675359372974
+  },
+  {
+   "t_count": 17,
+   "dE_mHa": 0.06589310382043578
+  }
+ ]
+}

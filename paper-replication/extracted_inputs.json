@@ -1,0 +1,32 @@
+{
+  "paper": {
+    "arxiv_id": "2606.05968v1",
+    "title": "Shattering the Symmetry Trap in Fixed-Ansatz VQE: An Accelerated ADAPT-VQE Study of Three Pillar Molecules under Bravyi-Kitaev Mapping",
+    "posted": "2026-06-04",
+    "category": "quant-ph",
+    "url": "https://arxiv.org/abs/2606.05968v1",
+    "found_by": "Valency semantic_search_papers (query: lithium hydride LiH molecular qubit Hamiltonian VQE bond dissociation), 2026-10-22"
+  },
+  "system": "LiH",
+  "inputs": {
+    "geometry_angstrom": {"value": "Li 0 0 0; H 0 0 1.696", "status": "stated", "source": "Section II and Table 2"},
+    "charge": {"value": 0, "status": "inferred", "reason": "neutral LiH"},
+    "multiplicity": {"value": 1, "status": "inferred", "reason": "closed-shell ground state"},
+    "basis": {"value": "sto-3g", "status": "inferred", "reason": "Frozen-core LiH with 5 active spatial orbitals (10 qubits) implies 6 basis functions, which is the STO-3G count for LiH. Confirmed when the reproduced RHF energy matched the paper's total to 3e-7 Ha."},
+    "frozen_core": {"value": "Li 1s", "status": "stated"},
+    "active_electrons": {"value": 2, "status": "stated"},
+    "active_orbitals": {"value": 5, "status": "stated"},
+    "qubits": {"value": 10, "status": "stated"},
+    "mapping": {"value": "bravyi_kitaev", "status": "stated"},
+    "reference_state": {"value": "|1111000000>", "status": "stated", "source": "Appendix A.1 run log (base64-encoded in the HTML)"},
+    "ansatz": {"value": "ADAPT-VQE over a 24-operator singlet singles-and-doubles pool", "status": "stated"}
+  },
+  "reported_energies_hartree": {
+    "active_space_energy": -1.034598,
+    "frozen_core_constant_shift": -7.758831,
+    "nuclear_repulsion": 0.936045,
+    "absolute_ground_state_energy": -7.857385,
+    "claim": "single-cycle convergence to the FCI limit",
+    "source": "Table 1 and Appendix A.1"
+  }
+}

@@ -1,0 +1,215 @@
+{
+ "schema": "heyting.quantum_circuit_ir.v1",
+ "circuit_id": "hf_a_k2_prep",
+ "semantic_profile": "exact_clifford_t_v2",
+ "qubits": [
+  {
+   "id": "q0"
+  },
+  {
+   "id": "q1"
+  }
+ ],
+ "classical_bits": [],
+ "initial_state": "zero",
+ "operations": [
+  {
+   "kind": "gate",
+   "op_id": "g0",
+   "gate": "sdg",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g1",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g2",
+   "gate": "z",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g3",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g4",
+   "gate": "s",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g5",
+   "gate": "sdg",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g6",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g7",
+   "gate": "s",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g8",
+   "gate": "z",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g9",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g10",
+   "gate": "s",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g11",
+   "gate": "cx",
+   "controls": [
+    "q0"
+   ],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g12",
+   "gate": "sdg",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g13",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g14",
+   "gate": "s",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g15",
+   "gate": "z",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g16",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g17",
+   "gate": "s",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g18",
+   "gate": "cx",
+   "controls": [
+    "q0"
+   ],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  }
+ ],
+ "metadata": {
+  "name": "hf_a_k2_prep",
+  "scope": "LiH STO-3G (2e,2o) parity_tapered state preparation, angles m=[2, -1, -1] x 2pi/2^2"
+ }
+}

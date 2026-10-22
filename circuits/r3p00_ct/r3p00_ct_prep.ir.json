@@ -1,0 +1,495 @@
+{
+ "schema": "heyting.quantum_circuit_ir.v1",
+ "circuit_id": "r3p00_ct_prep",
+ "semantic_profile": "exact_clifford_t_v2",
+ "qubits": [
+  {
+   "id": "q0"
+  },
+  {
+   "id": "q1"
+  }
+ ],
+ "classical_bits": [],
+ "initial_state": "zero",
+ "operations": [
+  {
+   "kind": "gate",
+   "op_id": "g0",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g1",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g2",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g3",
+   "gate": "s",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g4",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g5",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g6",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g7",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g8",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g9",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g10",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g11",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g12",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g13",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g14",
+   "gate": "s",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g15",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g16",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g17",
+   "gate": "z",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g18",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g19",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g20",
+   "gate": "z",
+   "controls": [],
+   "targets": [
+    "q0"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g21",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g22",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g23",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g24",
+   "gate": "sdg",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g25",
+   "gate": "cx",
+   "controls": [
+    "q0"
+   ],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g26",
+   "gate": "s",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g27",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g28",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g29",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g30",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g31",
+   "gate": "s",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g32",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g33",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g34",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g35",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g36",
+   "gate": "s",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g37",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g38",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g39",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g40",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g41",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g42",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g43",
+   "gate": "t",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g44",
+   "gate": "h",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g45",
+   "gate": "sdg",
+   "controls": [],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  },
+  {
+   "kind": "gate",
+   "op_id": "g46",
+   "gate": "cx",
+   "controls": [
+    "q0"
+   ],
+   "targets": [
+    "q1"
+   ],
+   "parameters": []
+  }
+ ],
+ "metadata": {
+  "name": "r3p00_ct_prep",
+  "scope": "LiH STO-3G (2e,2o) parity_tapered state preparation at R=3.0 A, exact Clifford+T synthesis, T-count 17"
+ }
+}
