@@ -6,6 +6,16 @@ This repo holds everything the run produced: the workflow itself, every circuit,
 
 ![LiH bond curve](figures/fig1_bond_curve.png)
 
+## Run it yourself
+
+1. **Sign up for a free AgentPMT account** at [agentpmt.com](https://www.agentpmt.com).
+2. **Connect your AI agent to AgentPMT over MCP** by following the instructions at [agentpmt.com/dynamic-mcp](https://www.agentpmt.com/dynamic-mcp).
+3. **Ask your agent to run the workflow.** It is called *Replicate and Certify a Quantum Chemistry Result: Exact-Gate Bond Curves with Lean Proofs*, AgentPMT workflow `6ada7c48e001971070f3313a`. Give it a molecule, a topic or an arXiv ID, for example:
+
+   > Run the "Replicate and Certify a Quantum Chemistry Result" workflow on recent LiH papers.
+
+   The workflow finds papers, reproduces their chemistry and builds the bond curve. It simulates, exports and certifies the circuits, and saves the report and certificates to your AgentPMT files. The two context documents it relies on are public on AgentPMT (copies are in [`context/`](context/)). Paper searches go through your own Valency connection.
+
 ## Headline results
 
 - **Replication.** arXiv [2606.05968v1](https://arxiv.org/abs/2606.05968v1) reports -7.857385 Ha as the FCI-limit ground state of LiH at 1.696 A ((2e,5o), Bravyi-Kitaev, 10 qubits). That number is the restricted Hartree-Fock energy (-7.857384707 Ha). The exact ground state of the stated active space is -7.879357455 Ha, **21.97 mHa lower**. The stated reference `|1111000000>` is not the Hartree-Fock state under Bravyi-Kitaev or Jordan-Wigner. [Details](paper-replication/replication_table.md).
