@@ -1,6 +1,14 @@
 {
+ "id": "6ada7c48e001971070f3313a",
+ "slug": "replicate-and-certify-a-quantum-chemistry-result-exact-gate-bond-curves-with-lean-proofs",
+ "version": "1.1.1",
+ "visibility": "public",
+ "context_document_ids": [
+  "6ada6b06e001971070f32fc7",
+  "6ada99f0e001971070f333a0"
+ ],
  "name": "Replicate and Certify a Quantum Chemistry Result: Exact-Gate Bond Curves with Lean Proofs",
- "description": "Finds recent quantum-chemistry papers with Valency, rebuilds the reported molecule in Chemistry Studio and checks the paper's numbers (geometry, reference state, energies) against exact calculations. It then models the chemical bond as a potential energy curve with exact-gate quantum circuits. For each bond length it runs a classical precision budget (how finely rotation angles must be set to reach chemical accuracy), a Qiskit Aer simulation with energies from measurement counts, OpenQASM 3 and Qiskit export, and Lean-kernel certificates (qpcert). The report states exactly what is proven (circuit properties) and what is not (the chemistry). Built for replication studies, method papers and teaching, using molecules such as LiH.",
+ "description": "Finds recent quantum-chemistry papers with Valency, rebuilds the reported molecule in Chemistry Studio and checks the paper's numbers (geometry, reference state, energies) against exact calculations. It then models the chemical bond as a potential energy curve with exact-gate quantum circuits. For each bond length it runs a classical precision budget (how finely rotation angles must be set to reach chemical accuracy), synthesizes an exact Clifford+T circuit in the Math Engine wherever the angles need finer phases, runs a Qiskit Aer simulation with energies from measurement counts, exports OpenQASM 3 and Qiskit programs, and issues Lean-kernel certificates (qpcert) for every circuit on the curve. The report states exactly what is proven (circuit properties) and what is not (the chemistry). Built for replication studies, method papers and teaching, using molecules such as LiH.",
  "nodes": [
   {
    "id": "set-question",

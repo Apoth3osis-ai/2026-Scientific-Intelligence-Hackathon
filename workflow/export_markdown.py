@@ -33,7 +33,7 @@ def main(src, dst):
 
     walk(wf["nodes"][0]["id"], 0)
     out = [f"# {wf['name']}", "", wf["description"], "",
-           "**Platform:** AgentPMT workflow (skill chain) `6ada7c48e001971070f3313a`, published as v1.1.0.",
+           "**Platform:** AgentPMT workflow (skill chain) `6ada7c48e001971070f3313a`, published publicly as v1.1.1 (same steps as v1.1.0).",
            "**Attached context documents** (copies in `../context/`):",
            "- Proof-Carrying Quantum Chemistry Rules (Agent Context `6ada6b06e001971070f32fc7`)",
            "- Certified Clifford+T Synthesis for Exact-Gate Chemistry Circuits (Agent Context `6ada99f0e001971070f333a0`)", "",
