@@ -58,6 +58,7 @@ The decoding supports the criticism under standard conventions. It does not iden
 
 ## Files
 
+- The paper we replicated, arXiv 2606.05968v1: [`2606.05968v1.pdf`](2606.05968v1.pdf)
 - Inputs and reported values, each marked stated or inferred: [`extracted_inputs.json`](extracted_inputs.json)
 - Energy decomposition check: [`energy_decomposition_check.json`](energy_decomposition_check.json)
 - Reference-state decoding: [`decode_reference.py`](decode_reference.py) and [`reference_state_decoding.json`](reference_state_decoding.json)

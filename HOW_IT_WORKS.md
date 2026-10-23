@@ -24,7 +24,7 @@ Context documents (copies in [`context/`](context/)):
 
 **Valency** searched semantically for recent LiH qubit-Hamiltonian work (for example "lithium hydride LiH molecular qubit Hamiltonian variational quantum eigensolver bond dissociation potential energy curve small active space", from 2026-01 onward). Each search took about half a second, and together they returned 48 unique papers from arXiv, chemRxiv and PubMed ([`paper-replication/valency_search_results.json`](paper-replication/valency_search_results.json)). The workflow shortlisted papers that report a molecule, a basis, an active space, a mapping and numerical energies, and chose **arXiv [2606.05968v1](https://arxiv.org/abs/2606.05968v1)**, an ADAPT-VQE study of LiH, HF and H2O under the Bravyi-Kitaev mapping.
 
-The **browser** read the full HTML text. The extraction step recorded every input with its status ([`paper-replication/extracted_inputs.json`](paper-replication/extracted_inputs.json)):
+The **browser** read the full HTML text (the PDF is in the repo: [`paper-replication/2606.05968v1.pdf`](paper-replication/2606.05968v1.pdf)). The extraction step recorded every input with its status ([`paper-replication/extracted_inputs.json`](paper-replication/extracted_inputs.json)):
 
 - stated: LiH at R = 1.696 A, Li 1s frozen, 2 active electrons in 5 active orbitals, Bravyi-Kitaev, 10 qubits, a 24-operator ADAPT pool
 - stated in the base64-encoded run log of Appendix A.1, which the agent decoded: reference state `|1111000000>`

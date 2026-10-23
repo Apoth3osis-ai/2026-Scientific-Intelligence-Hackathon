@@ -24,7 +24,7 @@ This repo holds everything the run produced: the workflow itself, every circuit,
   - **Basis.** The paper omits it. We assume STO-3G, which is strongly supported because all four components of the paper's energy breakdown match the STO-3G Hartree-Fock values to within 7e-7 Ha.
   - **The reported number is Hartree-Fock.** Under that assumption, it is the restricted Hartree-Fock energy (-7.857384707 Ha). The exact ground state of the stated active space is -7.879357455 Ha, **21.97 mHa lower**.
   - **The reference state is wrong.** Decoded explicitly under standard encodings, the stated reference `|1111000000>` is not the Hartree-Fock state. Under the Bravyi-Kitaev convention the tool itself uses, it is a 4-electron determinant. The exact implementation error is not established.
-  - [Details](paper-replication/replication_table.md).
+  - [Details](paper-replication/replication_table.md). The paper itself is included as [`paper-replication/2606.05968v1.pdf`](paper-replication/2606.05968v1.pdf), so you can check every number against the source.
 - **Bond curve.** 8 bond lengths from 1.0 to 3.0 A, **every point backed by an axiom-free Lean certificate** of the circuit's exact unitary. All simulated energies are within chemical accuracy (1.6 mHa) of exact, the largest error being 1.15 mHa. They also agree with each circuit's exact energy within shot noise (|z| <= 1.07).
 - **Certified Clifford+T synthesis.** Where Hartree-Fock misses by 15.6 mHa (3.0 A), a 47-gate Clifford+T circuit with 17 T gates lands 0.53 mHa from exact in simulation, and 0.066 mHa noise-free. The synthesis runs as one Complex Mathematics Engine expression in 0.12 s.
 
