@@ -1,0 +1,67 @@
+{
+ "paper_reference_state": "1111000000",
+ "active_space": "2 electrons in 5 spatial orbitals (10 spin orbitals)",
+ "hartree_fock_occupation": "1100000000 (orbital 0 alpha and beta)",
+ "hartree_fock_bk_bitstring_check": "1000000000",
+ "readings": {
+  "Bravyi-Kitaev, qubit 0 first, interleaved spin order": {
+   "occupation": "1011000100",
+   "electrons": 4,
+   "alpha_orbitals": [
+    0,
+    1
+   ],
+   "beta_orbitals": [
+    1,
+    3
+   ],
+   "Sz": 0.0
+  },
+  "Bravyi-Kitaev, qubit 0 first, block spin order": {
+   "occupation": "1011000100",
+   "electrons": 4,
+   "alpha_orbitals": [
+    0,
+    2,
+    3
+   ],
+   "beta_orbitals": [
+    2
+   ],
+   "Sz": 1.0
+  },
+  "Bravyi-Kitaev, qubit 0 last, interleaved spin order": {
+   "occupation": "0000001010",
+   "electrons": 2,
+   "alpha_orbitals": [
+    3,
+    4
+   ],
+   "beta_orbitals": [],
+   "Sz": 1.0
+  },
+  "Bravyi-Kitaev, qubit 0 last, block spin order": {
+   "occupation": "0000001010",
+   "electrons": 2,
+   "alpha_orbitals": [],
+   "beta_orbitals": [
+    1,
+    3
+   ],
+   "Sz": -1.0
+  },
+  "Jordan-Wigner occupation reading, qubit 0 first, interleaved": {
+   "occupation": "1111000000",
+   "electrons": 4,
+   "alpha_orbitals": [
+    0,
+    1
+   ],
+   "beta_orbitals": [
+    0,
+    1
+   ],
+   "Sz": 0.0
+  }
+ }
+}

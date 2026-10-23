@@ -5,7 +5,13 @@ All numbers below are also in `run_data.json`.
 
 ## Replication
 
-arXiv [2606.05968v1](https://arxiv.org/abs/2606.05968v1) reports a total LiH ground-state energy of -7.857385 Ha at R = 1.696 A (frozen core, (2e,5o), Bravyi-Kitaev, 10 qubits) and calls it the FCI limit. Chemistry Studio at the same settings (STO-3G, inferred from the orbital and qubit counts) gives RHF = -7.857384707 Ha, CASCI(2e,5o) = -7.879357455 Ha and all-electron FCI = -7.879592768 Ha. **The reported total is the Hartree-Fock energy; the exact ground state of the stated active space is 21.97 mHa lower.** The stated reference `|1111000000>` is not the Hartree-Fock state under Bravyi-Kitaev (`1000000000`) or Jordan-Wigner (`1100000000`). Details: `../paper-replication/`.
+arXiv [2606.05968v1](https://arxiv.org/abs/2606.05968v1) reports a total LiH ground-state energy of -7.857385 Ha at R = 1.696 A (frozen core, (2e,5o), Bravyi-Kitaev, 10 qubits) and calls it the FCI limit.
+
+**Assumption: the basis set.** The paper does not state it. We assume STO-3G, which is strongly supported: all four components of the paper's energy breakdown (total, frozen-core shift, active-space energy, nuclear repulsion) match the STO-3G restricted Hartree-Fock decomposition to within 7e-7 Ha. It is still an inference.
+
+Under that assumption, Chemistry Studio gives RHF = -7.857384707 Ha, CASCI(2e,5o) = -7.879357455 Ha and all-electron FCI = -7.879592768 Ha. **The reported total is the Hartree-Fock energy; the exact ground state of the stated active space is 21.97 mHa lower.**
+
+**Reference state.** Under Bravyi-Kitaev, counting 1s does not count electrons, so the stated reference `|1111000000>` was decoded explicitly. Under the Fenwick-tree convention that reproduces the tool's Hartree-Fock bitstring `1000000000`, it is the 4-electron occupation `1011000100`. Under the other standard readings it is two same-spin electrons, or four electrons read as Jordan-Wigner. None is the Hartree-Fock state, but the exact implementation error is not established. Details: `../paper-replication/`.
 
 ## Bond curve (2-qubit model)
 

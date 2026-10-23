@@ -1,0 +1,20 @@
+{
+ "source": "Chemistry Studio build_hamiltonian, LiH, R = 1.696 A, STO-3G, Li 1s frozen, (2e,2o), 2026-10-22. The frozen-core energy depends only on the frozen Li 1s core and the RHF orbitals, not on the active-space size.",
+ "nuclear_repulsion_hartree": 0.936044594787736,
+ "core_energy_hartree_including_nuclear_repulsion": -6.822786043773848,
+ "frozen_core_electronic_energy_hartree": -7.758830638561585,
+ "rhf_total_hartree": -7.85738470718891,
+ "rhf_active_space_energy_hartree": -1.0345986634150615,
+ "paper_values": {
+  "frozen_core_constant_shift": -7.758831,
+  "nuclear_repulsion": 0.936045,
+  "active_space_energy": -1.034598,
+  "total": -7.857385
+ },
+ "differences_hartree": {
+  "frozen_core_shift": 3.614384151973127e-07,
+  "nuclear_repulsion": -4.052122639652822e-07,
+  "active_space_energy_vs_rhf_active": -6.634150615525414e-07,
+  "total_vs_rhf": 2.9281109004131167e-07
+ }
+}

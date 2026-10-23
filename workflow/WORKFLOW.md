@@ -4,6 +4,7 @@ Finds recent quantum-chemistry papers with Valency, rebuilds the reported molecu
 
 **Platform:** AgentPMT workflow (skill chain) `6ada7c48e001971070f3313a`, published publicly as v1.1.1 (same steps as v1.1.0).
 **Attached context documents** (copies in `../context/`):
+
 - Proof-Carrying Quantum Chemistry Rules (Agent Context `6ada6b06e001971070f32fc7`)
 - Certified Clifford+T Synthesis for Exact-Gate Chemistry Circuits (Agent Context `6ada99f0e001971070f333a0`)
 
@@ -33,6 +34,7 @@ The user's message. It may name a molecule or topic, a paper ID, a recency windo
 **Outputs:**
 
 A short plan with these items:
+
 - the molecule(s)
 - 2-3 search queries
 - the date window (default: last 12 months)
@@ -47,7 +49,6 @@ Follow the attached context document 'Proof-Carrying Quantum Chemistry Rules'. N
 **Success criteria:**
 
 The plan is specific enough to run the search without asking again.
-
 
 ### 2. Find Recent Papers
 
@@ -74,6 +75,7 @@ A ranked shortlist with a one-line reason for each paper and the chosen paper to
 **Constraints:**
 
 Prefer papers that report:
+
 - a molecule and its bond length(s)
 - a basis set, active space and qubit mapping
 - numerical energies
@@ -83,7 +85,6 @@ Prefer recent papers. Show the shortlist to the user and continue with the top p
 **Success criteria:**
 
 Exactly one paper is selected, and the reason is stated.
-
 
 ### 4. Read the Full Text
 
@@ -106,6 +107,7 @@ Full text of the chosen paper.
 **Outputs:**
 
 A table of the following, with each item marked as stated, inferred (with reason) or missing:
+
 - molecule, charge and multiplicity
 - geometry and every bond length (Angstrom)
 - basis set
@@ -123,7 +125,6 @@ Do not guess silently. A missing basis may be inferred only from orbital and qub
 **Success criteria:**
 
 Chemistry Studio can be called with the paper's settings.
-
 
 ### 6. Reproduce the Chemistry Independently
 
@@ -157,6 +158,7 @@ Extracted claims and Chemistry Studio results.
 **Constraints:**
 
 Flag these:
+
 - any energy difference of 1.6 mHa (chemical accuracy) or more
 - any reference bitstring that is not the Hartree-Fock state under the stated mapping
 - any energy components that do not sum to the reported total
@@ -166,7 +168,6 @@ State inferences as inferences. Say that the circuit model is a reduced model wh
 **Success criteria:**
 
 Every reported number in the paper is either matched, flagged, or marked as not checkable.
-
 
 ### 8. Compute the Reference Bond Curve
 
@@ -180,17 +181,18 @@ Call scan_bond for the chosen molecule over the chosen range with method fci (or
 
 Process each bond length of the circuit model in order. Run quantum tool jobs one at a time.
 
-  #### 10. Build the Qubit Hamiltonian (inside the loop)
+#### 10. Build the Qubit Hamiltonian (inside the loop)
 
   *Tool: Chemistry Studio*
 
 Call build_hamiltonian for this bond length with the circuit model settings: basis, active_electrons, active_orbitals, mapping parity_tapered and pauli_format sparse. Keep the terms, the hf_state bitstring, hf_energy_hartree and exact_energy_hartree.
 
-  #### 11. Exact State and Precision Budget (inside the loop)
+#### 11. Exact State and Precision Budget (inside the loop)
 
   *Tool: Complex Mathematics Engine*
 
 Run one numpy calculate expression: the precision-budget template in the context document 'Proof-Carrying Quantum Chemistry Rules' (section 12), with HAMILTONIAN_SUM built from this bond length's terms. It must:
+
 1. Build the 4x4 Hamiltonian with np.kron (qubit 0 = left factor).
 2. Take np.linalg.eigh and the ground state.
 3. Compute the exact real state-preparation angles t0, alpha and beta.
@@ -198,7 +200,7 @@ Run one numpy calculate expression: the precision-budget template in the context
 
 The exact energy must equal Chemistry Studio's exact_energy_hartree to 1e-9 Ha. Choose K* as the smallest K for which this K and every finer K are within 1.6 mHa.
 
-  #### 12. Certified Clifford+T Synthesis (inside the loop)
+#### 12. Certified Clifford+T Synthesis (inside the loop)
 
   *Tool: Complex Mathematics Engine*
 
@@ -206,15 +208,16 @@ Run this step only when K* >= 5 (some angle needs a phase finer than 2*pi/16, wh
 Run one numpy calculate expression: the template in the context document 'Certified Clifford+T Synthesis for Exact-Gate Chemistry Circuits', with HAMILTONIAN_SUM built exactly as in the precision-budget step. It returns [E0, [t0, alpha, beta], E_circuit, dE_mHa, [q0_U0, q1_Ua, q1_Ub], front].
 Check that E0 equals the precision budget's exact energy to 1e-9 Ha and that dE_mHa is below 1.6. Keep the three gate lists, E_circuit, dE_mHa, the T count, the gate count (all gates plus 2 CX) and the T-count front for the report.
 
-  #### 13. Simulate, Export and Certify the Circuits (inside the loop)
+#### 13. Simulate, Export and Certify the Circuits (inside the loop)
 
   *Tool: Quantum Circuit Builder with Proof*
 
 Choose the certified circuit for this bond length:
+
 - K* <= 4: the dyadic state preparation at K*: Ry(t0) on q0, Ry(alpha) on q1, CX(0,1), Ry(beta) on q1, CX(0,1), each Ry written as Sdg, H, P, H, S with P expanded in binary into Z, S, T and rzk phases (rules document, sections 4 and 11).
 - K* >= 5: the Clifford+T gate lists from the synthesis step: q0_U0 on q0, q1_Ua on q1, CX(0,1), q1_Ub on q1, CX(0,1), profile exact_clifford_t_v2.
-If the certified circuit is gate-for-gate identical to one already run at another bond length (for example the Hartree-Fock circuit), reuse its counts, programs and certificate.
-Then, one job at a time, with resource_class standard:
+  If the certified circuit is gate-for-gate identical to one already run at another bond length (for example the Hartree-Fock circuit), reuse its counts, programs and certificate.
+  Then, one job at a time, with resource_class standard:
 1. execute_locally, shots 65536, for four Lean circuits: the state prep followed by the measurement bases ZZ, XX (H on both qubits), ZX (H on q1) and XZ (H on q0).
 2. export_provider_programs for the state prep, targets openqasm3 and qiskit_python.
 3. inspect_circuit on the IR twin (add image_format png only when the circuit has 20 operations or fewer), then certify_circuit with a well_formed claim and an exact_unitary_action claim bound to its circuit_subject_sha256.
@@ -222,7 +225,7 @@ Then, one job at a time, with resource_class standard:
 
 Poll get_task with wait_seconds 60. Completed tasks return result_file (and certificate_file): download each JSON from its signed_url and read result.result. Retry a timed-out or HTTP 5xx job once as a new task. Never resubmit a processing task.
 
-  #### 14. Energy from Measurement Counts (inside the loop)
+#### 14. Energy from Measurement Counts (inside the loop)
 
   *Reasoning step*
 
@@ -237,6 +240,7 @@ Counts from ZZ, XX, ZX and XZ for each simulated circuit, the Hamiltonian terms,
 **Outputs:**
 
 One row for this bond length:
+
 - bond length
 - HF and exact energies
 - for each simulated circuit: its exact energy, simulated energy +/- SE and z-score
@@ -255,7 +259,6 @@ Count keys put qubit 0 leftmost. Compute <P> as the sum of (-1)^(parity on the s
 
 The row is complete, and any flag is explained.
 
-
 ### 15. Assemble the Bond Curve and Proof Summary
 
 *Reasoning step*
@@ -271,6 +274,7 @@ Every point row, the reference curve, and the replication table.
 **Outputs:**
 
 A markdown report containing:
+
 - the replication findings
 - a bond-curve table (HF, exact, circuit-simulated energies)
 - the equilibrium bond length and dissociation energy, from both the exact and the simulated curve
@@ -287,7 +291,6 @@ A qpcert proves circuit properties, never energies. Report which claims were ker
 **Success criteria:**
 
 Every number in the report traces to a tool output.
-
 
 ### 16. Save the Report and Data
 
@@ -310,6 +313,7 @@ Assembled report and file ids.
 **Outputs:**
 
 A short summary covering:
+
 - the paper and replication verdict
 - the bond-curve headline numbers
 - the precision budget
@@ -323,7 +327,6 @@ No claims of quantum advantage or new chemistry. Quote failures and rejections v
 **Success criteria:**
 
 The user can cite the files and reproduce every number.
-
 
 ## Graph
 

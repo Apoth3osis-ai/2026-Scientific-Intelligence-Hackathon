@@ -29,23 +29,34 @@ The **browser** read the full HTML text. The extraction step recorded every inpu
 - stated: LiH at R = 1.696 A, Li 1s frozen, 2 active electrons in 5 active orbitals, Bravyi-Kitaev, 10 qubits, a 24-operator ADAPT pool
 - stated in the base64-encoded run log of Appendix A.1, which the agent decoded: reference state `|1111000000>`
 - stated: total ground-state energy -7.857385 Ha, called the FCI limit
-- inferred: basis STO-3G (frozen-core LiH with 5 active orbitals implies 6 basis functions, the STO-3G count for LiH)
+- **not stated: the basis set.** We assume STO-3G. Frozen-core LiH with 5 active orbitals implies 6 basis functions, the STO-3G count for LiH. Every conclusion below holds under this assumption.
 
 ## 2. Reproduce the chemistry independently
 
-**Chemistry Studio** rebuilt the paper's model and computed reference energies at the same settings:
+**Chemistry Studio** rebuilt the paper's model at the same settings, with the assumed STO-3G basis. It reproduced every component of the paper's energy breakdown within the paper's six-decimal rounding:
 
-| Quantity | Paper | Chemistry Studio |
-|---|---|---|
-| Nuclear repulsion (Ha) | 0.936045 | 0.936044595 |
-| Qubits (Bravyi-Kitaev) | 10 | 10 (276 Pauli terms) |
-| RHF energy (Ha) | | -7.857384707 |
-| Reported total ground state (Ha) | -7.857385 | equals RHF to 3e-7 |
-| CASCI(2e,5o) (Ha) | | **-7.879357455** |
-| All-electron FCI (Ha) | | -7.879592768 |
-| HF reference bitstring | `1111000000` | BK `1000000000`, JW `1100000000` |
+| Quantity | Paper | Chemistry Studio, STO-3G | Difference (Ha) |
+|---|---|---|---|
+| Nuclear repulsion (Ha) | 0.936045 | 0.936044595 | -4.1e-7 |
+| Frozen-core shift (Ha) | -7.758831 | -7.758830639 (frozen Li 1s core) | +3.6e-7 |
+| Active-space energy (Ha) | -1.034598 | -1.034598663 (RHF, within the active space) | -6.6e-7 |
+| Reported total ground state (Ha) | -7.857385 | -7.857384707 (RHF total) | +2.9e-7 |
+| Exact active-space ground state, CASCI(2e,5o) (Ha) | | **-7.879357455** | |
+| All-electron FCI (Ha) | | -7.879592768 | |
 
-**Finding.** The paper's reported total is the restricted Hartree-Fock energy. The exact ground state of the stated active space is **21.97 mHa lower** (about 14 times chemical accuracy), and all-electron FCI is 22.21 mHa lower. The stated reference has four occupied qubits for two active electrons; it is not the Hartree-Fock state under Bravyi-Kitaev or Jordan-Wigner. The RHF match to 3e-7 Ha confirms the inferred STO-3G basis. The CASCI energy also agrees with exact diagonalization of the 276-term qubit Hamiltonian to 1e-12 Ha. Files: [`paper-replication/replication_table.md`](paper-replication/replication_table.md), [`hamiltonians/LiH_R1.696_sto3g_2e5o_bravyi_kitaev.json`](hamiltonians/LiH_R1.696_sto3g_2e5o_bravyi_kitaev.json).
+**Basis assumption.** The match of all four components strongly supports STO-3G. It remains an inference, because the paper omits the basis ([`paper-replication/energy_decomposition_check.json`](paper-replication/energy_decomposition_check.json)).
+
+**Finding 1.** Under that assumption, the paper's reported total and its active-space energy are the restricted Hartree-Fock values. The exact ground state of the stated active space is **21.97 mHa lower** (about 14 times chemical accuracy), and all-electron FCI is 22.21 mHa lower. The CASCI energy also agrees with exact diagonalization of the 276-term qubit Hamiltonian to 1e-12 Ha.
+
+**Finding 2.** The stated reference `|1111000000>` is not the Hartree-Fock state under standard encodings. Under Bravyi-Kitaev a qubit stores a parity, so counting 1s does not count electrons. The workflow therefore decoded the bitstring explicitly ([`paper-replication/decode_reference.py`](paper-replication/decode_reference.py)):
+
+- **BK, qubit 0 first.** This Fenwick-tree convention reproduces Chemistry Studio's Hartree-Fock bitstring `1000000000`. Under it, the reference decodes to the 4-electron occupation `1011000100`, the wrong particle number for a 2-electron active space.
+- **BK, qubit 0 last.** It decodes to two same-spin electrons.
+- **Jordan-Wigner occupation reading.** It is a 4-electron state.
+
+None of these is the Hartree-Fock state `1100000000`. The decoding supports the criticism under standard conventions. The paper's code is not available, so the exact implementation error is not established.
+
+Files: [`paper-replication/replication_table.md`](paper-replication/replication_table.md), [`hamiltonians/LiH_R1.696_sto3g_2e5o_bravyi_kitaev.json`](hamiltonians/LiH_R1.696_sto3g_2e5o_bravyi_kitaev.json).
 
 ## 3. Choose the circuit model and compute the reference curve
 
