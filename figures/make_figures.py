@@ -13,6 +13,7 @@ import os
 import matplotlib
 
 matplotlib.use("Agg")
+import matplotlib.patches
 import matplotlib.pyplot as plt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -147,8 +148,74 @@ def fig3():
     fig.savefig(os.path.join(HERE, "fig3_circuit_r3p00_ct.png"), dpi=220)
 
 
+def fig_workflow():
+    """The workflow graph: reasoning steps in grey, tool steps coloured with the tool named."""
+    wf = load("workflow", "workflow.json")
+    tool_name = {"6ada7145e001971070f33005": "Valency", "69644454288e0324fa542102": "Web Browser",
+                 "6ada6971e001971070f32f9a": "Chemistry Studio", "689df4ac8ee2d1dd79e9035b": "Math Engine",
+                 "6a7e5036b8c970a6773201b5": "Quantum Circuit\nBuilder with Proof", "6948b078b54506f955d789ed": "File Management"}
+    short = {"set-question": "Set the question", "find-papers": "Find papers", "shortlist": "Shortlist",
+             "read-paper": "Read full text", "extract-claims": "Extract inputs\nand claims", "reproduce": "Reproduce\nthe chemistry",
+             "consistency": "Check the\npaper's numbers", "reference-curve": "Reference\nbond curve",
+             "point-hamiltonian": "Qubit\nHamiltonian", "point-budget": "Precision\nbudget", "point-cliffordt": "Clifford+T\nsynthesis",
+             "point-circuits": "Simulate, export,\ncertify", "point-energy": "Energy from\ncounts", "assemble": "Assemble\nreport",
+             "save-files": "Save files", "final-report": "Report"}
+    nodes = {n["id"]: n for n in wf["nodes"]}
+    rows = [["set-question", "find-papers", "shortlist", "read-paper"],
+            ["extract-claims", "reproduce", "consistency", "reference-curve"],
+            ["point-hamiltonian", "point-budget", "point-cliffordt", "point-circuits", "point-energy"],
+            ["assemble", "save-files", "final-report"]]
+    fig, ax = plt.subplots(figsize=(6.4, 4.3))
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 8.4)
+    ax.axis("off")
+    W, Hh = 1.72, 1.05
+    ys = [7.2, 5.25, 3.1, 0.95]
+    pos = {}
+    for r, ids in enumerate(rows):
+        n = len(ids)
+        gap = (10 - 0.4 - n * W) / (n - 1) if n > 1 else 0
+        for i, nid in enumerate(ids):
+            pos[nid] = (0.2 + i * (W + gap), ys[r])
+    loop_ids = rows[2]
+    x0 = pos[loop_ids[0]][0] - 0.12
+    x1 = pos[loop_ids[-1]][0] + W + 0.12
+    ax.add_patch(matplotlib.patches.FancyBboxPatch((x0, ys[2] - 0.62), x1 - x0, Hh + 0.95, boxstyle="round,pad=0.02,rounding_size=0.15",
+                                                   fc="#f4f8fe", ec=BLUE, lw=0.9, ls=(0, (3, 2)), zorder=0))
+    ax.text(x1 - 0.1, ys[2] + Hh + 0.12, "For each bond length", fontsize=7.5, color=BLUE, fontweight="bold", ha="right")
+    for nid, (x, y) in pos.items():
+        n = nodes[nid]
+        is_tool = n["type"] == "tool"
+        fc, ec = ("#e8f1fc", BLUE) if is_tool else ("#f0efec", AXIS)
+        ax.add_patch(matplotlib.patches.FancyBboxPatch((x, y - Hh / 2), W, Hh, boxstyle="round,pad=0.02,rounding_size=0.08",
+                                                       fc=fc, ec=ec, lw=1.0, zorder=2))
+        if is_tool:
+            ax.text(x + W / 2, y + 0.17, short[nid], ha="center", va="center", fontsize=6.6, color=INK, zorder=3, linespacing=1.05)
+            ax.text(x + W / 2, y - 0.33, tool_name[n["tool"]["product_id"]], ha="center", va="center", fontsize=5.6,
+                    color=BLUE, fontweight="bold", zorder=3, linespacing=1.0)
+        else:
+            ax.text(x + W / 2, y, short[nid], ha="center", va="center", fontsize=6.6, color=INK2, zorder=3, linespacing=1.05)
+    arrow = {"arrowstyle": "-|>", "color": INK2, "lw": 0.9, "shrinkA": 0, "shrinkB": 0, "mutation_scale": 7}
+    for ids in rows:
+        for a, b in zip(ids, ids[1:]):
+            (xa, ya), (xb, yb) = pos[a], pos[b]
+            ax.annotate("", xy=(xb, yb), xytext=(xa + W, ya), arrowprops=arrow, zorder=1)
+    for ra, rb in zip(rows, rows[1:]):
+        (xa, ya), (xb, yb) = pos[ra[-1]], pos[rb[0]]
+        mid = (ya - Hh / 2 + ys[2] + Hh + 0.33) / 2 if rb is rows[2] else (ya - Hh / 2 + yb + Hh / 2) / 2
+        ax.plot([xa + W / 2, xa + W / 2, xb + W / 2], [ya - Hh / 2, mid, mid], color=INK2, lw=0.9, zorder=1)
+        ax.annotate("", xy=(xb + W / 2, yb + Hh / 2 + (0.05 if rb is not rows[2] else 0.0)), xytext=(xb + W / 2, mid), arrowprops=arrow, zorder=1)
+    ax.add_patch(matplotlib.patches.Rectangle((0.2, 8.05), 0.32, 0.22, fc="#e8f1fc", ec=BLUE, lw=1.0))
+    ax.text(0.6, 8.16, "AgentPMT tool step", fontsize=7, color=INK2, va="center")
+    ax.add_patch(matplotlib.patches.Rectangle((3.0, 8.05), 0.32, 0.22, fc="#f0efec", ec=AXIS, lw=1.0))
+    ax.text(3.4, 8.16, "Agent reasoning step", fontsize=7, color=INK2, va="center")
+    fig.tight_layout(pad=0.3)
+    fig.savefig(os.path.join(HERE, "fig0_workflow.png"), dpi=220)
+
+
 if __name__ == "__main__":
+    fig_workflow()
     fig1()
     fig2()
     fig3()
-    print("wrote fig1_bond_curve.png, fig2_precision.png, fig3_circuit_r3p00_ct.png")
+    print("wrote fig0_workflow.png, fig1_bond_curve.png, fig2_precision.png, fig3_circuit_r3p00_ct.png")
