@@ -1,6 +1,6 @@
 # Certified quantum circuits for a chemical bond
 
-An AI workflow on AgentPMT found a 2026 arXiv paper on lithium hydride and independently re-derived its energies. It showed that the paper's reported ground state is the Hartree-Fock energy, 22 mHa above the exact answer. It then mapped the LiH bond curve with quantum circuits whose exact unitaries are proven by the Lean kernel, simulated in Qiskit Aer and Stim, and exported as runnable OpenQASM 3 and Qiskit programs.
+An [AI workflow on AgentPMT](https://www.agentpmt.com/agent-workflow-skills/replicate-and-certify-a-quantum-chemistry-result-exact-gate-bond-curves-with-lean-proofs) found a 2026 arXiv paper on lithium hydride and independently re-derived its energies. It showed that the paper's reported ground state is the Hartree-Fock energy, 22 mHa above the exact answer. It then mapped the LiH bond curve with quantum circuits whose exact unitaries are proven by the Lean kernel, simulated in Qiskit Aer and Stim, and exported as runnable OpenQASM 3 and Qiskit programs.
 
 This repo holds everything the run produced: the workflow itself, every circuit, certificate, receipt, simulation count, exported program and figure, and the scripts that reproduce the numbers.
 
@@ -10,7 +10,7 @@ This repo holds everything the run produced: the workflow itself, every circuit,
 
 1. **Sign up for a free AgentPMT account** at [agentpmt.com](https://www.agentpmt.com).
 2. **Connect your AI agent to AgentPMT over MCP** by following the instructions at [agentpmt.com/dynamic-mcp](https://www.agentpmt.com/dynamic-mcp).
-3. **Ask your agent to run the workflow.** It is called *Replicate and Certify a Quantum Chemistry Result: Exact-Gate Bond Curves with Lean Proofs*, AgentPMT workflow `6ada7c48e001971070f3313a`. Give it a molecule, a topic or an arXiv ID, for example:
+3. **Ask your agent to run the workflow** [*Replicate and Certify a Quantum Chemistry Result: Exact-Gate Bond Curves with Lean Proofs*](https://www.agentpmt.com/agent-workflow-skills/replicate-and-certify-a-quantum-chemistry-result-exact-gate-bond-curves-with-lean-proofs). Give it a molecule, a topic or an arXiv ID, for example:
 
    > Run the "Replicate and Certify a Quantum Chemistry Result" workflow on recent LiH papers.
 
@@ -30,10 +30,12 @@ This repo holds everything the run produced: the workflow itself, every circuit,
 
 ## Read more
 
-- [`HOW_IT_WORKS.md`](HOW_IT_WORKS.md): the full test run, step by step, with every tool call's role and result
-- [`results/REPORT.md`](results/REPORT.md): the report the workflow produced
-- [`workflow/WORKFLOW.md`](workflow/WORKFLOW.md): the workflow exported as markdown (AgentPMT workflow `6ada7c48e001971070f3313a`, v1.1.0)
+- [The workflow on AgentPMT](https://www.agentpmt.com/agent-workflow-skills/replicate-and-certify-a-quantum-chemistry-result-exact-gate-bond-curves-with-lean-proofs): the live, public workflow
 - [`PAPER.md`](PAPER.md): the one-page summary
+- [`HOW_IT_WORKS.md`](HOW_IT_WORKS.md): the full test run, step by step, with every tool call's role and result
+- [`RESEARCH_NOTES.md`](RESEARCH_NOTES.md): the lab notebook: how we built the workflow, what each tool does, and every design decision
+- [`results/REPORT.md`](results/REPORT.md): the report the workflow produced
+- [`workflow/WORKFLOW.md`](workflow/WORKFLOW.md): the workflow exported as markdown
 
 ## Layout
 
